@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blush: #d9a0a7;
+  --ivory: #fff9f4;
+  --espresso: #382724;
+  --gold: #c6a46a;
+  --sage: #78866b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--espresso);
+  font-family: var(--font-sans), "Jost", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--blush);
+  color: var(--espresso);
+}
+
+/* Subtle, refined focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
