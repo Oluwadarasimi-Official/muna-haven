@@ -73,7 +73,7 @@ export default function AdminNav({ onSignOut }: { onSignOut: () => void }) {
           <span className="block w-5 h-0.5 bg-ivory mb-1" />
           <span className="block w-5 h-0.5 bg-ivory" />
         </button>
-        <span className="font-display text-lg">Muna&apos;s Haven · Owner</span>
+        <span className="font-display text-lg">Mun&apos;s Haven · Owner</span>
         <Image
           src="/logo.jpg"
           alt="Mun's Haven"
@@ -106,7 +106,7 @@ export default function AdminNav({ onSignOut }: { onSignOut: () => void }) {
           />
           <div>
             <p className="font-display text-lg leading-tight text-espresso">
-              Muna&apos;s Haven
+              Mun&apos;s Haven
             </p>
             <p className="text-xs text-espresso/50">Owner dashboard</p>
           </div>

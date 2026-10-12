@@ -32,7 +32,7 @@ export default async function HomePage() {
             className="h-24 w-24 rounded-full object-cover ring-2 ring-gold/60 shadow-[0_8px_30px_rgba(198,164,106,0.35)]"
           />
           <p className="mt-6 text-xs font-medium tracking-[0.35em] text-gold uppercase">
-            Muna&rsquo;s Haven
+            Mun&rsquo;s Haven
           </p>
           <h1 className="text-balance mt-4 max-w-2xl font-display text-4xl leading-tight text-espresso sm:text-5xl md:text-6xl">
             Timeless pieces for the modern muse
@@ -119,7 +119,7 @@ export default async function HomePage() {
           <span className="h-px w-12 bg-gold/70" />
         </div>
         <p className="mt-6 text-[16px] leading-relaxed text-espresso/75">
-          Muna&rsquo;s Haven is a boutique for women who love beautiful things —
+          Mun&rsquo;s Haven is a boutique for women who love beautiful things —
           quality human hair and jewellery pieces selected with care, so you can
           shop with confidence and wear with pride. Every order is personal:
           simply tap a piece, enquire on WhatsApp, and we&rsquo;ll take it from there.

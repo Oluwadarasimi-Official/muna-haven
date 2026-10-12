@@ -56,7 +56,7 @@ export default function LoginForm() {
           />
           <div className="text-center">
             <h1 className="font-display text-2xl text-espresso">
-              Muna&apos;s Haven
+              Mun&apos;s Haven
             </h1>
             <p className="text-sm text-espresso/60">Owner dashboard sign in</p>
           </div>

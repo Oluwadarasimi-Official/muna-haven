@@ -30,7 +30,7 @@ export default function SiteFooter({
               sizes="40px"
               className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/50"
             />
-            <span className="font-display text-xl text-ivory">Muna&rsquo;s Haven</span>
+            <span className="font-display text-xl text-ivory">Mun&rsquo;s Haven</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ivory/70">
             Timeless hair &amp; jewellery pieces, curated for the modern muse.
@@ -100,7 +100,7 @@ export default function SiteFooter({
       </div>
       <div className="border-t border-ivory/10">
         <p className="mx-auto max-w-6xl px-4 py-5 text-center text-xs tracking-wide text-ivory/50 sm:px-6">
-          © {year} Muna&rsquo;s Haven. All rights reserved.
+          © {year} Mun&rsquo;s Haven. All rights reserved.
         </p>
       </div>
     </footer>

@@ -36,7 +36,7 @@ export default function SiteHeader({ whatsappDisplay }: { whatsappDisplay: strin
             className="h-11 w-11 rounded-full object-cover ring-1 ring-gold/50"
           />
           <span className="font-display text-xl tracking-wide text-espresso sm:text-2xl">
-            Muna&rsquo;s Haven
+            Mun&rsquo;s Haven
           </span>
         </Link>
 
