@@ -25,7 +25,7 @@ export default async function ContactPage() {
     {
       title: "WhatsApp",
       value: waDisplay,
-      href: `https://wa.me/${waNumber}?text=${encodeURIComponent("Hello Muna's Haven! 👋")}`,
+      href: `https://wa.me/${waNumber}?text=${encodeURIComponent("Hello Mun's Haven! 👋")}`,
       hint: "Fastest way to enquire & order.",
       icon: (
         <svg width="26" height="26" viewBox="0 0 24 24" fill="#128C4B" aria-hidden="true">

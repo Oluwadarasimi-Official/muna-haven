@@ -49,7 +49,7 @@ export default function LoginForm() {
         <div className="flex flex-col items-center gap-3 mb-8">
           <Image
             src="/logo.jpg"
-            alt="Muna's Haven"
+            alt="Mun's Haven"
             width={72}
             height={72}
             className="rounded-full object-cover shadow"

@@ -24,7 +24,7 @@ export default async function HomePage() {
           {/* Logo mark at 96px — well under the 640px native file: crisp. */}
           <Image
             src="/logo.jpg"
-            alt="Muna's Haven logo"
+            alt="Mun's Haven logo"
             width={96}
             height={96}
             sizes="96px"

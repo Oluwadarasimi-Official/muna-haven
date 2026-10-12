@@ -6,7 +6,7 @@ export default function NotFound() {
     <div className="mx-auto flex max-w-xl flex-col items-center px-4 py-20 text-center sm:px-6">
       <Image
         src="/logo.jpg"
-        alt="Muna's Haven logo"
+        alt="Mun's Haven logo"
         width={72}
         height={72}
         sizes="72px"

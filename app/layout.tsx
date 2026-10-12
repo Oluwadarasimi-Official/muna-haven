@@ -20,9 +20,9 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Muna's Haven — Timeless Hair & Jewellery",
+  title: "Mun's Haven — Timeless Hair & Jewellery",
   description:
-    "Muna's Haven — a premium boutique for quality human hair and timeless jewellery pieces. Enquire on WhatsApp.",
+    "Mun's Haven — a premium boutique for quality human hair and timeless jewellery pieces. Enquire on WhatsApp.",
 };
 
 export default async function RootLayout({

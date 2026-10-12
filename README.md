@@ -1,6 +1,6 @@
-# Muna's Haven — Boutique Storefront
+# Mun's Haven — Boutique Storefront
 
-A full-stack Next.js 14 e-commerce site for **Muna's Haven** boutique: product
+A full-stack Next.js 14 e-commerce site for **Mun's Haven** boutique: product
 catalog, WhatsApp ordering, store updates/blog, and an `/admin` dashboard.
 
 - Storefront: home (hero, featured products), `/shop` (search, category filter,
@@ -48,7 +48,7 @@ hold production keys.
 
 ## Deployment
 
-- Hosted on Vercel: **https://muna-haven-tech-nova-academy.vercel.app**
+- Hosted on Vercel: **https://munshaven.vercel.app**
 - GitHub: https://github.com/Oluwadarasimi-Official/muna-haven
 - The Vercel project (`muna-haven`) is deployed from uploaded source; env vars
   are set on the project as production-only, encrypted variables:
@@ -80,11 +80,5 @@ hold production keys.
 
 - **WhatsApp Channel URL** — waiting on David to send it; then wire it into
   the channel-sync flow.
-- **Logo naming decision** — the official logo reads "Mun's Haven" while the
-  brief says "Muna's Haven"; the build uses the logo file as-is until David
-  decides.
-- **Owner-account provisioning** — blocked by the shared project's
-  `handle_new_user()` / `profiles.referral_code` trigger (legacy code on the
-  shared project, not this repo); needs owner approval to repair. No owner
-  account exists yet, so a full login click-through in production has not been
-  tested.
+- **Brand** — "Mun's Haven" everywhere (site text matches the official logo, which reads "Mun's Haven"). The logo file itself is used byte-identical, never redrawn.
+- **Owner account** — provisioned and verified 2026-10-12: the shared Supabase project's legacy `handle_new_user()` trigger was repaired (it now mints a unique `referral_code` per new profile instead of failing NOT NULL), the `OfficialMuna` owner login was created, and sign-in + owner RLS write/delete were verified end-to-end against production.

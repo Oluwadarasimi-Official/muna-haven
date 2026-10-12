@@ -76,7 +76,7 @@ export default function AdminNav({ onSignOut }: { onSignOut: () => void }) {
         <span className="font-display text-lg">Muna&apos;s Haven · Owner</span>
         <Image
           src="/logo.jpg"
-          alt="Muna's Haven"
+          alt="Mun's Haven"
           width={32}
           height={32}
           className="rounded-full object-cover"
@@ -99,7 +99,7 @@ export default function AdminNav({ onSignOut }: { onSignOut: () => void }) {
         <div className="flex items-center gap-3 px-5 pt-6 pb-4">
           <Image
             src="/logo.jpg"
-            alt="Muna's Haven"
+            alt="Mun's Haven"
             width={40}
             height={40}
             className="rounded-full object-cover"

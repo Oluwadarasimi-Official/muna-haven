@@ -8,7 +8,7 @@ import FlashToast from "@/components/admin/FlashToast";
 import { signOutOwner } from "@/lib/admin/actions";
 
 export const metadata = {
-  title: "Owner dashboard — Muna's Haven",
+  title: "Owner dashboard — Mun's Haven",
   robots: "noindex, nofollow",
 };
 

@@ -24,7 +24,7 @@ export default function SiteFooter({
             {/* Logo at 40px — well under the 640px native file: always crisp. */}
             <Image
               src="/logo.jpg"
-              alt="Muna's Haven logo"
+              alt="Mun's Haven logo"
               width={40}
               height={40}
               sizes="40px"

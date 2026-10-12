@@ -38,7 +38,7 @@ const PLACEHOLDER_SVG =
         <circle cx="400" cy="330" r="90"/>
         <path d="M270 560 L400 450 L530 560"/>
       </g>
-      <text x="400" y="640" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#382724" opacity="0.65">Muna's Haven</text>
+      <text x="400" y="640" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#382724" opacity="0.65">Mun's Haven</text>
     </svg>`
   );
 

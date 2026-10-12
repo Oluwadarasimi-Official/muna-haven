@@ -24,7 +24,7 @@ export default function UpdateCard({ update }: { update: Update }) {
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#f3e9e4]">
           <ImageWithFallback
             src={update.image_url}
-            alt={update.title ?? "Muna's Haven update"}
+            alt={update.title ?? "Mun's Haven update"}
             fill
             sizes="(max-width: 640px) 100vw, 640px"
           />

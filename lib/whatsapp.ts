@@ -9,7 +9,7 @@ export interface EnquiryInput {
   priceKobo: number;
   /** Selected variant label, e.g. "14 inches". Omit the line when undefined. */
   variant?: string;
-  /** Canonical product page URL, e.g. https://muna-haven.vercel.app/shop/slug */
+  /** Canonical product page URL, e.g. https://munshaven.vercel.app/shop/slug */
   pageUrl: string;
 }
 
@@ -19,7 +19,7 @@ export interface EnquiryInput {
  */
 export function buildEnquiryLink(input: EnquiryInput): string {
   const lines = [
-    "Hello Muna's Haven! 👋",
+    "Hello Mun's Haven! 👋",
     "I'd like to enquire about this item:",
     `• ${input.name}`,
     `• Ref: ${input.reference}`,

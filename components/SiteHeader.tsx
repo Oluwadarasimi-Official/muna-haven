@@ -25,10 +25,10 @@ export default function SiteHeader({ whatsappDisplay }: { whatsappDisplay: strin
   return (
     <header className="sticky top-0 z-40 border-b border-espresso/10 bg-ivory/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-3" aria-label="Muna's Haven — home">
+        <Link href="/" className="flex items-center gap-3" aria-label="Mun's Haven — home">
           <Image
             src="/logo.jpg"
-            alt="Muna's Haven logo"
+            alt="Mun's Haven logo"
             width={44}
             height={44}
             sizes="44px"
@@ -54,7 +54,7 @@ export default function SiteHeader({ whatsappDisplay }: { whatsappDisplay: strin
             </Link>
           ))}
           <a
-            href={`https://wa.me/2347018733485?text=${encodeURIComponent("Hello Muna's Haven! 👋")}`}
+            href={`https://wa.me/2347018733485?text=${encodeURIComponent("Hello Mun's Haven! 👋")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-espresso px-5 py-2 text-sm font-medium text-ivory transition-opacity hover:opacity-90"
@@ -99,7 +99,7 @@ export default function SiteHeader({ whatsappDisplay }: { whatsappDisplay: strin
             </Link>
           ))}
           <a
-            href={`https://wa.me/2347018733485?text=${encodeURIComponent("Hello Muna's Haven! 👋")}`}
+            href={`https://wa.me/2347018733485?text=${encodeURIComponent("Hello Mun's Haven! 👋")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 block rounded-full bg-espresso px-5 py-3 text-center text-sm font-medium text-ivory"
