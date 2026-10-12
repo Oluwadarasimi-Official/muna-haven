@@ -25,7 +25,7 @@ export async function getPublicSettings(): Promise<Record<string, string>> {
 
 /** Fallback contact/notice values (match the seeded settings contract). */
 export const SETTING_DEFAULTS = {
-  email: "yzigzag26@gmail.com",
+  contact_email: "yzigzag26@gmail.com",
   whatsapp_display: "+234 701 873 3485",
   whatsapp_number: "2347018733485",
   telegram_url: "https://t.me/TrustOSLLC",

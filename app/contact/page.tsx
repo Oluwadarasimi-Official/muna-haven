@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 export default async function ContactPage() {
   const settings = await getPublicSettings();
-  const email = settings.email || SETTING_DEFAULTS.email;
+  const email = settings.contact_email || SETTING_DEFAULTS.contact_email;
   const waDisplay = settings.whatsapp_display || SETTING_DEFAULTS.whatsapp_display;
   const waNumber = settings.whatsapp_number || SETTING_DEFAULTS.whatsapp_number;
   const telegram = settings.telegram_url || SETTING_DEFAULTS.telegram_url;

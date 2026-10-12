@@ -7,7 +7,7 @@ export default function SiteFooter({
 }: {
   settings: Record<string, string>;
 }) {
-  const email = settings.email || SETTING_DEFAULTS.email;
+  const email = settings.contact_email || SETTING_DEFAULTS.contact_email;
   const waDisplay = settings.whatsapp_display || SETTING_DEFAULTS.whatsapp_display;
   const waNumber = settings.whatsapp_number || SETTING_DEFAULTS.whatsapp_number;
   const telegram = settings.telegram_url || SETTING_DEFAULTS.telegram_url;
