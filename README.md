@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muna's Haven — Boutique Storefront
 
-## Getting Started
+A full-stack Next.js 14 e-commerce site for **Muna's Haven** boutique: product
+catalog, WhatsApp ordering, store updates/blog, and an `/admin` dashboard.
 
-First, run the development server:
+- Storefront: home (hero, featured products), `/shop` (search, category filter,
+  sort), product pages (`/shop/[slug]`) with WhatsApp enquiry buttons,
+  `/updates`, `/about`, `/contact`.
+- Admin (`/admin`): login-protected dashboard to manage products, orders, and
+  site settings.
+- Database: Supabase Postgres (schema in `supabase/migrations/`), RLS enabled.
+- Branding: blush pink (`#D9A0A7`), deep navy, gold accents; logo at
+  `public/logo.jpg`.
+
+## Setup
+
+```bash
+git clone https://github.com/Oluwadarasimi-Official/muna-haven.git
+cd muna-haven
+npm install
+cp .env.example .env.local
+```
+
+Fill in `.env.local` (see `.env.example` for the variable list — it contains
+**no real secrets**, only blanks). The real keys are in the Vercel project's
+production environment variables, never in git.
+
+Apply the database migrations to the shared Supabase project
+(`vtappsupjgsuzhemypkq`) using the stored run-sql CLI (it never prints raw
+credentials):
+
+```bash
+~/workspace/skills/supabase/bin/run-sql --ref vtappsupjgsuzhemypkq \
+  --file supabase/migrations/20261012_01_schema.sql
+```
+
+> Do NOT touch any existing tables in the shared project — the migrations only
+> create the `mh_*` tables this app owns.
+
+Then start dev:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. `.env.local` is for local dev only and must never
+hold production keys.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Hosted on Vercel: **{{PROD_URL}}**
+- GitHub: https://github.com/Oluwadarasimi-Official/muna-haven
+- The Vercel project (`muna-haven`) is deployed from uploaded source; env vars
+  are set on the project as production-only, encrypted variables:
+  - `NEXT_PUBLIC_SUPABASE_URL` — https://vtappsupjgsuzhemypkq.supabase.co
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY` — public anon key
+  - `SUPABASE_SERVICE_ROLE_KEY` — server-only (used by `lib/supabaseAdmin.ts`)
+  - `NEXT_PUBLIC_SITE_URL` — the production URL above (used to build the
+    shareable product link inside WhatsApp enquiry messages)
+- Deployment protection / SSO is disabled so the storefront is public.
+- After changing any `NEXT_PUBLIC_*` variable, trigger a redeploy — they are
+  inlined at build time.
 
-## Learn More
+## Troubleshooting
 
-To learn more about Next.js, take a look at the following resources:
+- **Empty pages / products missing in production:** env vars are not set on
+  the Vercel project (or were added after the last build). Add them as
+  *production* variables and redeploy.
+- **401s / RLS errors from Supabase:** check that `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  matches the shared project's current anon key and that the `mh_*` tables'
+  policies allow reads.
+- **Product images not loading:** `next.config.mjs` uses `images.remotePatterns`
+  for the Supabase storage host — if the storage host changes, update it there.
+- **`/admin` redirects to `/admin/login` unexpectedly:** the middleware guards
+  `/admin/*`; the session cookie is missing or expired — sign in again.
+- **`/admin` 404s on a fresh deploy:** confirm the admin routes were included
+  in the deployment file set.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Still pending
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **WhatsApp Channel URL** — waiting on David to send it; then wire it into
+  the channel-sync flow.
+- **Logo naming decision** — the official logo reads "Mun's Haven" while the
+  brief says "Muna's Haven"; the build uses the logo file as-is until David
+  decides.
+- **Owner-account provisioning** — blocked by the shared project's
+  `handle_new_user()` / `profiles.referral_code` trigger (legacy code on the
+  shared project, not this repo); needs owner approval to repair. No owner
+  account exists yet, so a full login click-through in production has not been
+  tested.
