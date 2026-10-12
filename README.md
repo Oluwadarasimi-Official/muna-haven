@@ -48,7 +48,7 @@ hold production keys.
 
 ## Deployment
 
-- Hosted on Vercel: **{{PROD_URL}}**
+- Hosted on Vercel: **https://muna-haven-tech-nova-academy.vercel.app**
 - GitHub: https://github.com/Oluwadarasimi-Official/muna-haven
 - The Vercel project (`muna-haven`) is deployed from uploaded source; env vars
   are set on the project as production-only, encrypted variables:
